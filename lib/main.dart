@@ -23,10 +23,6 @@ class _LoginFormState extends State<LoginForm> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        // appBar: AppBar(
-        //   centerTitle: true,
-        //   title: Text("Login Form"),
-        // ),
 
         body: Container(
           decoration: BoxDecoration(
@@ -82,7 +78,7 @@ class _LoginFormState extends State<LoginForm> {
                             height: 100,
                             decoration: BoxDecoration(
                               image: DecorationImage(
-                                image: AssetImage('assets/images/avatar.png'),
+                                image: AssetImage('assets/images/avatar.jpg'),
                                 fit: BoxFit.contain,
                               ),
                               border: Border.all(color: Colors.black, width: 1),
