@@ -97,21 +97,25 @@ class _LoginFormState extends State<LoginForm> {
                             color: Colors.white,
                           ),
                         ),
-                        TextField(
-                          controller: _usernameController,
-                          decoration: InputDecoration(
-                            hintText: "Username...",
-                            hintStyle: TextStyle(color: Colors.white.withOpacity(0.4),fontSize: 15),
-                            border: UnderlineInputBorder(borderSide: BorderSide(color: Colors.white)),
-                            enabledBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.white, width: 2)),
-                            focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.white, width: 3),),
+                        Container(
+                          height: 30,
+                          child: TextField(
+                            controller: _usernameController,
+                            decoration: InputDecoration(
+                              hintText: "Username...",
+                              contentPadding: EdgeInsets.fromLTRB(0, 0, 0, 20),
+                              hintStyle: TextStyle(color: Colors.white.withOpacity(0.4),fontSize: 15),
+                              border: UnderlineInputBorder(borderSide: BorderSide(color: Colors.white)),
+                              enabledBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.white, width: 2)),
+                              focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.white, width: 3),),
+                            ),
+                            style: TextStyle(
+                              color: Colors.white,
+                            ),
+                            cursorColor: Colors.white,
+                            
+                            textAlignVertical: TextAlignVertical.center,
                           ),
-                          style: TextStyle(
-                            color: Colors.white,
-                          ),
-                          cursorColor: Colors.white,
-                          
-                          textAlignVertical: TextAlignVertical.center,
                         ),
                         SizedBox(height: 20,),
                         Text(
@@ -123,39 +127,45 @@ class _LoginFormState extends State<LoginForm> {
                             color: Colors.white,
                           ),
                         ),
-                        TextField(
-                          controller: _passwordController,
-                          obscureText: !_eyeIcon,
-                          decoration: InputDecoration(
-                            hintText: "Password...",
-                            hintStyle: TextStyle(color: Colors.white.withOpacity(0.4),fontSize: 15),
-                            border: UnderlineInputBorder(borderSide: BorderSide(color: Colors.white)),
-                            enabledBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.white, width: 2)),
-                            focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.white, width: 3)),
-                            suffixIcon: GestureDetector(
-                              onTap: () {
-                                setState(() {
-                                  _eyeIcon = !_eyeIcon;
-                                });
-                              },
-                              child: Icon(
-                                _eyeIcon ? Icons.visibility : Icons.visibility_off,
-                                color: Colors.grey,
+                        Container(
+                          height: 30,
+                          child: TextField(
+                            controller: _passwordController,
+                            obscureText: !_eyeIcon,
+                            decoration: InputDecoration(
+                              hintText: "Password...",
+                              contentPadding: EdgeInsets.fromLTRB(0, 0, 0, 20),
+                              hintStyle: TextStyle(color: Colors.white.withOpacity(0.4),fontSize: 15),
+                              border: UnderlineInputBorder(borderSide: BorderSide(color: Colors.white)),
+                              enabledBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.white, width: 2)),
+                              focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.white, width: 3)),
+                              suffixIcon: GestureDetector(
+                                onTap: () {
+                                  setState(() {
+                                    _eyeIcon = !_eyeIcon;
+                                  });
+                                },
+                                child: Icon(
+                                  _eyeIcon ? Icons.visibility : Icons.visibility_off,
+                                  color: Colors.grey,
+                                ),
                               ),
                             ),
+                            style: TextStyle(
+                              color: Colors.white,
+                            ),
+                            cursorColor: Colors.white,
+                            textAlignVertical: TextAlignVertical.center,
                           ),
-                          style: TextStyle(
-                            color: Colors.white,
-                          ),
-                          cursorColor: Colors.white,
-                          textAlignVertical: TextAlignVertical.center,
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
                             Text("Don't Have An Account?",style: TextStyle(color: Colors.white,fontSize: 10),),
                             TextButton(
-                              onPressed: (){},
+                              onPressed: (){
+                                Navigator.pushNamed(context, '/register');
+                              },
                               child: Text(
                                 "Sign Up",
                                 style: TextStyle(

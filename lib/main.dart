@@ -9,8 +9,8 @@ void main() => runApp(
     debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: {
-        '/sss': (context) => LoginForm(),
+        '/': (context) => LoginForm(),
         '/scroll': (context) => ContohScroll(),
-        '/' : (context) => RegisterForm(),
+        '/register' : (context) => RegisterForm(),
       },
     ));

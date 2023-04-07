@@ -30,6 +30,7 @@ class _RegisterFormState extends State<RegisterForm> {
   
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         //appbar : AppBar(),
         body: Container(
@@ -229,7 +230,9 @@ class _RegisterFormState extends State<RegisterForm> {
                           children: [
                             Text("Have An Account?",style: TextStyle(color: Colors.white,fontSize: 10),),
                             TextButton(
-                              onPressed: (){},
+                              onPressed: (){
+                                Navigator.pushNamed(context, '/');
+                              },
                               child: Text(
                                 "Sign In",
                                 style: TextStyle(
@@ -248,7 +251,7 @@ class _RegisterFormState extends State<RegisterForm> {
                           children: [
                             MaterialButton(
                               onPressed: () {
-                                Navigator.pushNamed(context, '/scroll');
+                                Navigator.pushNamed(context, '/');
                                 _passwordController.clear();
                                 _usernameController.clear();
                               },
