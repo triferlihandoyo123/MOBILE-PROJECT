@@ -1,6 +1,6 @@
 # loginform
 
-A new Flutter project.
+Login Form untuk praktik penggunaan api php dan mysql db
 
 ## Getting Started
 
